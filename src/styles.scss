@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './assets/scss/bootstrap.custom.scss';
+@import './assets/scss/customVariables.scss';
+@import './assets/scss/primeng.custom.scss';
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background: $body-background-color;
+    input,
+    button,
+    textarea {
+        font-family: 'HNMedium' !important;
+    }
+    a {
+        text-decoration: none !important;
+        color: $app-green-color !important;
+    }
+    a:hover {
+        color: $app-green-color !important;
+    }
+    a:active {
+        color: $app-green-color !important;
+    }
+    .ui-panel{
+        color: $app-title-color;
+    }
+    .ui-panel .ui-panel-titlebar{
+        padding-top: 1%;
+        border: 0px;
+    }
+    .pi-plus:before {
+        color: grey;
+    }
+    .pi-minus:before {
+        color: grey;
+    }
+    .ui-panel .ui-panel-titlebar .ui-panel-titlebar-icon {
+        top: -37px;
+        margin: -4px;
+        right: 20px;
+    }
+    .ui-panel .ui-panel-content{
+        background: #f4f4f4;
+        border: 0px;
+    }
+}

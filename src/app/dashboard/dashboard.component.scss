@@ -1,0 +1,35 @@
+@import "../../assets/scss/customVariables";
+.employee-list {
+    padding: 10px;
+    .grey__text {
+        color: $text-info;
+    }
+    .employee__list_obj {
+        margin-top: 2%;
+        padding: 10px;
+    }
+    .emp__element_avatar {
+        margin-top: 10px;
+    }
+    .emp__element {
+        margin-top: 18px;
+    }
+    .__center {
+        text-align: center !important;
+    }
+    h1,
+    h3 {
+        font-weight: 500;
+    }
+    .panel__content {
+        .row {
+            padding: 5px;
+        }
+    }
+    .expanded__details {
+        padding: 5px;
+        a {
+            color: black !important;
+        }
+    }
+}

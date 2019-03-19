@@ -1,0 +1,29 @@
+.container-fluid {
+    max-width: 1366px;
+    width: 80%;
+    height: auto;
+    background: #E3E3E3;
+}
+
+@media (max-width: 768px) and (min-width: 766px) {
+    .container-fluid {
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 766px) {
+    .container-fluid {
+        padding: 1%;
+    }
+}
+
+@media (max-width: 765px) and (min-width: 280px) {
+    .container-fluid {
+        overflow: auto;
+        max-height: 1000px;
+        overflow-y: scroll;
+        height: auto;
+        overflow-x: hidden;
+        padding: 0;
+    }
+}

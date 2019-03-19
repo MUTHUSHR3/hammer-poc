@@ -1,0 +1,85 @@
+<div class="employee-list">
+
+  <div class="employee__list_obj" *ngFor="let obj of empResults">
+    <p-panel [transitionOptions]="'10ms'" [collapsed]="true" [toggleable]="true">
+
+      <p-header>
+        <div class="row">
+
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12 emp__element_avatar">
+            <ngx-avatar src="http://{{obj.thumbnail}}"></ngx-avatar>
+          </div>
+
+
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 emp__element">
+            <span class="grey__text">Emp </span>
+            <span>#{{obj.id}}</span>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 emp__element">
+            <span class="grey__text">Title </span>
+            <span>{{obj.title}}</span>
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 emp__element">
+            <span class="grey__text">City </span>
+            <span>{{obj.city}}</span>
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 emp__element">
+            <span class="grey__text">Zip </span>
+            <span>{{obj.zip_code}}</span>
+          </div>
+
+        </div>
+      </p-header>
+
+      <div class="panel__content">
+
+        <div class="__center">
+          <div style="display: inline-block">
+            <ngx-avatar size="150" src="http://{{obj.thumbnail}}"></ngx-avatar>
+          </div>
+        </div>
+
+        <div class="__center">
+          <h1>{{obj.title}}</h1>
+          <h3>{{obj.city}}, {{obj.zip_code}}</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="expanded__details">
+              <span class="grey__text">Description</span> : {{obj.description}}
+            </div>
+            <div class="expanded__details">
+              <span class="grey__text">Awarded</span> : {{obj.is_awarded?'Yes':'No'}}
+            </div>
+            <div class="expanded__details">
+              <span class="grey__text">Created</span> : {{obj.created_at | date:'medium' }}
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="expanded__details">
+              <span class="grey__text">Attachments</span>
+            </div>
+            <div class="expanded__details" *ngFor="let item of obj.attachments;let i=index">
+              <a href="{{item}}">Attachment {{i+1}}</a>
+            </div>
+            <div class="expanded__details">
+              <span class="grey__text">Categories</span> :
+              <span *ngFor="let category of obj.categories">{{getCategoryValue(category.id)}}</span>
+            </div>
+            <div class="expanded__details">
+              <span class="grey__text">Notifications:</span> {{obj.counter.messages_total+obj.counter.messages_unread}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </p-panel>
+
+  </div>
+
+</div>
